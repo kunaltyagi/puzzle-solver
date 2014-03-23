@@ -60,6 +60,27 @@ public class String {
     {
         globalLinkage = linkage;
     }
+    public void initSudoku()
+    {
+        n = m = 9;
+        type = 0;
+        globalLevel = globalLinkage = 9;
+        allocate();
+        for(int k = 0; k < n; ++k)
+        {
+            for(int i = 0; i < n; ++i)
+            {
+                ArrayList<Field> newFields = new ArrayList<Field>();
+                for(int j = 0; j < m; ++j)
+                {
+                    Field tmpField = new Field(j+1);
+                    newFields.add(tmpField);
+                }
+                ((table[k])[i]).setFields(newFields);
+            }
+            
+        }
+    }
 
     /**
      * @param args the command line arguments

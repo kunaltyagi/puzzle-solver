@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package string;
 
 /**
@@ -16,6 +12,12 @@ public class Field {
     public Field()
     {
         _value = 0;
+        _state = 0;
+        _connectionsIn = _connectionsOut = 0;
+    }
+    public Field(int value)
+    {
+        _value = value;
         _state = 0;
         _connectionsIn = _connectionsOut = 0;
     }
